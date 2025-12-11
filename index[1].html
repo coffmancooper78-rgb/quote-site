@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Quote Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #222;
+      padding: 20px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    #container {
+      margin-top: 60px;
+    }
+    #quoteBox {
+      background: #1c1c1c;
+      padding: 30px;
+      margin: 0 auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 12px;
+      font-size: 24px;
+      line-height: 1.4;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      min-height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      margin-top: 30px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .ad-box {
+      background: #333;
+      width: 80%;
+      max-width: 600px;
+      height: 120px;
+      margin: 40px auto;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #bbb;
+      font-size: 18px;
+      border: 1px dashed #555;
+    }
+  </style>
+</head>
+<body>
+  <header>AI Quote Generator</header>
+
+  <div id="container">
+    <div class="ad-box">Your AdSense Ad Here</div>
+
+    <div id="quoteBox">Press the button to generate a quote.</div>
+    <button onclick="generateQuote()">Generate Quote</button>
+
+    <div class="ad-box">Your AdSense Ad Here</div>
+  </div>
+
+  <script>
+    const quotes = [
+      "Success is built on the courage to start.",
+      "Your future is created by what you do today.",
+      "Discipline is choosing what you want most over what you want now.",
+      "Small steps every day lead to big results.",
+      "Dream big, work smart, stay consistent.",
+      "Great things never come from comfort zones.",
+      "Every day is a new opportunity to grow.",
+      "The harder you work, the luckier you get.",
+      "Push yourself because no one else will do it for you.",
+      "You are capable of more than you think."
+    ];
+
+    function generateQuote() {
+      const q = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById("quoteBox").innerText = q;
+    }
+  </script>
+</body>
+</html>
